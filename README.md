@@ -2,9 +2,9 @@
 Repository where I add bots and test them to enhnance the github workflow
 
 ## Bots Added
-1) [Request Info](https://probot.github.io/apps/request-info/):
+1) [Templater](https://github.com/apps/templater):
     
-    This is bot is added to ensure that pull request templates or issue templates are followed. This is used by big OSS companies like homebrew, apache and standard.js to name a few. 
+    This is bot is added to ensure that pull request templates or issue templates are followed. This bot checks that the either the PR Template is not empty or that the PR body does not match the PR Template
     
 2) [Traffico](https://github.com/marketplace/trafico-pull-request-labeler/):
 
