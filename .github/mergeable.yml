@@ -12,5 +12,5 @@ mergeable:
     fail: 
      - do: comment
        payload:
-       body: >
-        This is work in progress. Do not merge yet.
+         body: >
+           This is work in progress. Do not merge yet.
