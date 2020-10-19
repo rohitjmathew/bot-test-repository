@@ -6,12 +6,6 @@ mergeable:
        # Do not merge when it is marked work in progress (WIP)
        must_exclude:
          regex: ^WIP
-    fail: 
-     - do: comment
-       payload:
-       body: >
-        This is work in progress. Do not merge yet.
-    validate:
      - do: label
        must_exclude:
          regex: 'wip'
