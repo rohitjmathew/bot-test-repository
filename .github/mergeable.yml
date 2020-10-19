@@ -27,6 +27,11 @@ mergeable:
                       Settings : {{{displaySettings details.settings}}}\n
                       {{/each}}\n
                {{/each}}"
+    pass:
+     - do: comment
+       payload:
+         body: >
+           This PR is ready for review :tada: :+1: :confetti_ball:      
   - when: pull_request.*, pull_request_review.*
     validate:
       - do: label
@@ -36,7 +41,7 @@ mergeable:
       - do: comment
         payload:
           body: >
-            **This PR does not contain any description. ** 
+            **This PR does not contain any description.** 
             The owners of this repository would appreciate it if you could provide us with more info about this issue/pr! 
       - do: checks # default fail case
         status: 'failure' # Can be: success, failure, neutral, cancelled, timed_out, or action_required
@@ -55,3 +60,8 @@ mergeable:
                        Settings : {{{displaySettings details.settings}}}\n
                        {{/each}}\n
                 {{/each}}"
+    pass:
+     - do: comment
+       payload:
+         body: >
+           The owners of this repository appreciate the info you provided with respect to this code changes! :beers: :+1:      
