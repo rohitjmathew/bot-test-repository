@@ -33,3 +33,8 @@ mergeable:
        payload:
          body: >
            The owners of this repository appreciate the info you provided with respect to this code changes! :beers: :+1:
+     - do: checks # default pass case
+       status: 'success' # Can be: success, failure, neutral, cancelled, timed_out, or action_required
+       payload:
+         title: 'Mergeable Run have been Completed!'
+         summary: "All the validators have returned 'pass'! \n Here are some stats of the run: \n {{validationCount}} validations were ran"
