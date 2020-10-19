@@ -13,3 +13,7 @@ Repository where I add bots and test them to enhnance the github workflow
 3) [Pull Request Size](https://github.com/marketplace/pull-request-size):
 
     Ideally the best way to do code reviews is by means of smaller simple PRs. To help enforce this and to encourage smaller PRs being created this bot will enable us to add a label describing the size of the PR. 
+    
+4) [Mergeable](https://github.com/mergeability/mergeable):
+
+    To enforce standards are followed stringently you can use rules in mergeable to block pull request merges. Multiple OSS organisations like airflow, grpc and fossasia. 
