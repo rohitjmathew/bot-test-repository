@@ -42,7 +42,7 @@ mergeable:
         payload:
           body: >
             **This PR does not contain any description.** 
-            The owners of this repository would appreciate it if you could provide us with more info about this issue/pr! 
+            The owners of this repository would appreciate it if you could provide us with more info about this pr! 
       - do: checks # default fail case
         status: 'failure' # Can be: success, failure, neutral, cancelled, timed_out, or action_required
         payload:
