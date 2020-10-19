@@ -14,6 +14,23 @@ mergeable:
        payload:
          body: >
            This is work in progress. Do not merge yet.
+     - do: checks # default fail case
+       status: 'failure' # Can be: success, failure, neutral, cancelled, timed_out, or action_required
+       payload:
+         title: 'Mergeable Run have been Completed!'
+         summary: |
+              ### Status: {{toUpperCase validationStatus}}
+                   Here are some stats of the run:
+                   {{validationCount}} validations were ran.
+                   {{passCount}} PASSED
+                   {{failCount}} FAILED
+         text: "{{#each validationSuites}}\n
+               #### {{{statusIcon status}}} Validator: {{toUpperCase name}}\n
+               {{#each validations }} * {{{statusIcon status}}} ***{{{ description }}}***\n
+                      Input : {{{details.input}}}\n
+                      Settings : {{{displaySettings details.settings}}}\n
+                      {{/each}}\n
+               {{/each}}"
   - when: pull_request.*, pull_request_review.*
     validate:
       - do: label
@@ -25,3 +42,20 @@ mergeable:
           body: >
             **This PR does not contain any description. ** 
             The owners of this repository would appreciate it if you could provide us with more info about this issue/pr! 
+      - do: checks # default fail case
+        status: 'failure' # Can be: success, failure, neutral, cancelled, timed_out, or action_required
+        payload:
+          title: 'Mergeable Run have been Completed!'
+          summary: |
+               ### Status: {{toUpperCase validationStatus}}
+                    Here are some stats of the run:
+                    {{validationCount}} validations were ran.
+                    {{passCount}} PASSED
+                    {{failCount}} FAILED
+          text: "{{#each validationSuites}}\n
+                #### {{{statusIcon status}}} Validator: {{toUpperCase name}}\n
+                {{#each validations }} * {{{statusIcon status}}} ***{{{ description }}}***\n
+                       Input : {{{details.input}}}\n
+                       Settings : {{{displaySettings details.settings}}}\n
+                       {{/each}}\n
+                {{/each}}"
