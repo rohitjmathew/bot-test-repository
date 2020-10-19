@@ -14,3 +14,14 @@ mergeable:
        payload:
          body: >
            This is work in progress. Do not merge yet.
+  - when: pull_request.*, pull_request_review.*
+    validate:
+      - do: label
+        must_exclude:
+         regex: 'needs-more-info'
+    fail:
+      - do: comment
+        payload:
+          body: >
+            **This PR does not contain any description. ** 
+            The owners of this repository would appreciate it if you could provide us with more info about this issue/pr! 
