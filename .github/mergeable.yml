@@ -1,6 +1,6 @@
 version: 2
 mergeable: 
-  - when: pull_request_review.unlabeled
+  - when: pull_request.unlabeled, pull_requests.editied
     validate:
       - do: label
         must_exclude:
