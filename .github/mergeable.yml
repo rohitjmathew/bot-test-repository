@@ -1,37 +1,5 @@
 version: 2
-mergeable:
-  - when: pull_request.*, pull_request_review.*
-    validate:
-     - do: label
-       must_exclude:
-         regex: 'wip'
-    fail: 
-     - do: comment
-       payload:
-         body: >
-           This is work in progress. Do not merge yet.
-     - do: checks # default fail case
-       status: 'failure' # Can be: success, failure, neutral, cancelled, timed_out, or action_required
-       payload:
-         title: 'Mergeable Run have been Completed!'
-         summary: |
-              ### Status: {{toUpperCase validationStatus}}
-                   Here are some stats of the run:
-                   {{validationCount}} validations were ran.
-                   {{passCount}} PASSED
-                   {{failCount}} FAILED
-         text: "{{#each validationSuites}}\n
-               #### {{{statusIcon status}}} Validator: {{toUpperCase name}}\n
-               {{#each validations }} * {{{statusIcon status}}} ***{{{ description }}}***\n
-                      Input : {{{details.input}}}\n
-                      Settings : {{{displaySettings details.settings}}}\n
-                      {{/each}}\n
-               {{/each}}"
-    pass:
-     - do: comment
-       payload:
-         body: >
-           This PR is ready for review :tada: :+1: :confetti_ball:      
+mergeable: 
   - when: pull_request.*, pull_request_review.*
     validate:
       - do: label
