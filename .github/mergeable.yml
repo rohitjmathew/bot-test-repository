@@ -28,8 +28,3 @@ mergeable:
                        Settings : {{{displaySettings details.settings}}}\n
                        {{/each}}\n
                 {{/each}}"
-    pass:
-     - do: comment
-       payload:
-         body: >
-           The owners of this repository appreciate the info you provided with respect to this code changes! :beers: :+1:      
