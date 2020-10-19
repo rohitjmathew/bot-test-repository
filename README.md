@@ -16,4 +16,9 @@ Repository where I add bots and test them to enhnance the github workflow
     
 4) [Mergeable](https://github.com/mergeability/mergeable):
 
-    To enforce standards are followed stringently you can use rules in mergeable to block pull request merges. Multiple OSS organisations like airflow, grpc and fossasia. 
+    To enforce standards are followed stringently you can use rules in mergeable to block pull request merges. Multiple OSS organisations like airflow, grpc and fossasia. In this scenario we use mergeable to block the PR if the body isn't updated with useful data. 
+    
+    
+4) [WIP](https://github.com/wip/app):
+
+    To ensure we do not merge PRs with WIP in them we are using the WIP bot to block PR merges with WIP in the title
