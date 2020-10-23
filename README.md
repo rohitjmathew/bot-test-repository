@@ -22,3 +22,5 @@ Repository where I add bots and test them to enhnance the github workflow
 4) [WIP](https://github.com/wip/app):
 
     To ensure we do not merge PRs with WIP in them we are using the WIP bot to block PR merges with WIP in the title
+
+Test
