@@ -2,7 +2,7 @@
 Repository where I add bots and test them to enhnance the github workflow
 
 ## Bots Added
-1) [Templater](https://github.com/apps/templater):
+1) [Templater](https://github.com/marketplace/templater):
     
     This is bot is added to ensure that pull request templates or issue templates are followed. This bot checks that the either the PR Template is not empty or that the PR body does not match the PR Template
     
