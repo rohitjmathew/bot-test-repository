@@ -23,7 +23,7 @@ probotTemplateEnforcerLabelToAdd: needs-more-info
 
 # *OPTIONAL* Require Issues to contain more information than what is provided in the issue templates
 # Will fail if the issue's body is equal to a provided template
-checkIssueTemplate: false
+checkIssueTemplate: true
 
 # *OPTIONAL* Require Pull Requests to contain more information than what is provided in the PR template
 # Will fail if the pull request's body is equal to the provided template
@@ -33,7 +33,7 @@ checkPullRequestTemplate: true
 # Keys must be lowercase. Valid values are 'issue' and 'pullRequest'
 probotTemplateEnforcerOn:
   pullRequest: true
-  issue: false
+  issue: true
 
 # *OPTIONAL* Add a list of people whose Issues/PRs will not be commented on
 # keys must be GitHub usernames
